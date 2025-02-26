@@ -1,10 +1,10 @@
-import { createAsparagus } from "./asparagus.js"
-import { createCorn } from "./corn.js"
-import { addPlant, usePlants } from "./field.js"
-import { createPotato } from "./potato.js"
-import { createSoybean } from "./soybean.js"
-import { createSunflower } from "./sunflower.js"
-import { createWheat } from "./wheat.js"
+import { createAsparagus } from "./seeds/asparagus.js"
+import { createCorn } from "./seeds/corn.js"
+import { addPlant } from "./field.js"
+import { createPotato } from "./seeds/potato.js"
+import { createSoybean } from "./seeds/soybean.js"
+import { createSunflower } from "./seeds/sunflower.js"
+import { createWheat } from "./seeds/wheat.js"
 
 export const plantSeeds = (yearlyPlanArray) => {
     for (let i = 0; i < yearlyPlanArray.length; i++) {
