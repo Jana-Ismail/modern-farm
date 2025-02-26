@@ -11,5 +11,21 @@ export const harvestPlants = (plantsArr) => {
             plantsOutput.push(plantObj);
         }
     }
+
+    plantsOutput.sort((a, b) => a.type.localeCompare(b.type))
+
+    // plantsOutput.sort((a, b) => {
+    //     const typeA = a.type
+    //     const typeB = b.type
+
+    //     if (typeA < typeB) {
+    //         return -1;
+    //     }
+    //     if (typeA > typeB) {
+    //         return 1
+    //     }
+    //     return 0;
+    // });
+
     return plantsOutput
 }
