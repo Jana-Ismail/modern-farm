@@ -7,26 +7,29 @@ const outputTotals = {
     Wheat: 0
 }
 
+let plantObjId = 0
+
 export const harvestPlants = (plantsArr) => {
     const plantsOutput = []
     for (const plantObj of plantsArr) {
-        let output = plantObj.output
-        const plantType = plantObj.type
+        let output = plantObj.output;
+        const plantType = plantObj.type;
 
         if (plantType === "Corn") {
-            output = plantObj.output / 2
+            output = plantObj.output / 2;
         }
 
         for (let i = 0; i < output; i++) {
-            plantsOutput.push(plantObj);
-            
-            outputTotals[`${plantType}`] += 1
+            plantObjId++
+            const harvestedPlant = {...plantObj, id: plantObjId}
+            plantsOutput.push(harvestedPlant);    
+            outputTotals[`${plantType}`] += 1;
         }
     }
 
     // option to sort harvested plants output
     // alphabetically by type
-        plantsOutput.sort((a, b) => a.type.localeCompare(b.type))
+        // plantsOutput.sort((a, b) => a.type.localeCompare(b.type))
 
         // ||
 
